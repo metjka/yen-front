@@ -1,0 +1,23 @@
+.editor {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.canva {
+  width: 510px;
+}
+
+.connections {
+  width: 50%;
+}
+.input-row {
+  display: flex;
+  flex-direction: row;
+}
