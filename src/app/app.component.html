@@ -1,40 +1,6 @@
-<div class="container">
-  <div class="editor">
-    <div class="canva">
-      <div id="canvas">
-      </div>
-      <div>
-        <div>Yen's solutions</div>
-        <div *ngFor="let line of getResult(); let position = index ">
-          {{position}}). {{line}}
-        </div>
-      </div>
-    </div>
-    <div class="connections">
-      <input id="fileUpload" type="file" accept=".txt" (change)="fileUpload($event)">
-      <br/>
-      <div>
-        <button (click)="addConnection()">Add connection</button>
-        <input [(ngModel)]="newFrom">
-        <input [(ngModel)]="newTo">
-        <input [(ngModel)]="newValue">
-      </div>
-      <div *ngFor="let con of showGraph(); let position = index">
-        <div class="input-row"></div>
-        <input [value]="con[0]" (change)="modelChanged(position, 0, $event.target.value)">
-        <input [value]="con[1]" (change)="modelChanged(position, 1, $event.target.value)">
-        <input [value]="con[2]" (change)="modelChanged(position, 2, $event.target.value)">
-        <button (click)="remove(position)">X</button>
-      </div>
-      <button (click)="solveGraph()">Parse and solve</button>
-      <label for="from">From</label>
-      <input id="from" [(ngModel)]="from">
-      <label for="to">To</label>
-      <input id="to" [(ngModel)]="to">
-    </div>
-  </div>
-</div>
-
-
-
-
+<h1>My sketches</h1>
+<!--<nav>-->
+<!--  <a routerLink="/wave" routerLinkActive="active">Wave</a> |-->
+<!--  <a routerLink="/yen" routerLinkActive="active">Yen</a> |-->
+<!--</nav>-->
+<router-outlet></router-outlet>

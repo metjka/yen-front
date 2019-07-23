@@ -1,4 +1,4 @@
-import {GraphNode} from './GraphNode';
+import {GraphNode} from './graph-node';
 import * as p5 from 'p5';
 
 export class Path {
